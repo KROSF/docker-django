@@ -1,0 +1,23 @@
+{
+	"name": "Python 3.8 & PostgreSQL",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/home/vscode/workspace",
+	"settings": {
+		"python.formatting.provider": "black",
+		"python.linting.enabled": true,
+		"python.linting.flake8Enabled": true,
+		"python.linting.pylintEnabled": false
+	},
+	"extensions": [
+		"ms-python.python",
+		"eamodio.gitlens",
+		"njpwerner.autodocstring",
+		"visualstudioexptteam.vscodeintellicode"
+	],
+	"postCreateCommand": "pipenv install --pre --ignore-pipfile --dev",
+	"remoteUser": "vscode",
+	"forwardPorts": [
+		8000
+	]
+}
